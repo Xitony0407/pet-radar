@@ -1,12 +1,21 @@
 // archivo: found-pets.service.ts
-
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { FoundPet } from './entities/found-pet.entity';
 import { Injectable } from '@nestjs/common';
 import { MailerService } from '@nestjs-modules/mailer';
 
 @Injectable()
 export class FoundPetsService {
 
-  constructor(private readonly mailer: MailerService) {}
+  constructor(
+
+  @InjectRepository(FoundPet)
+  private repo: Repository<FoundPet>,
+
+  private readonly mailer: MailerService,
+
+) {}
 
   async create(data: any) {
 
@@ -62,6 +71,10 @@ export class FoundPetsService {
 
     }
 
+  }
+
+  async findAll() {
+  return this.repo.find();
   }
 
 }

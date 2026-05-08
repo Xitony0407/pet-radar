@@ -30,4 +30,12 @@ export class LostPetsService {
     return await this.repo.save(pet);
   }
 
+  async findAll() {
+  return this.repo.find({
+    where: {
+      is_active: true
+    }
+  });
+}
+
 }

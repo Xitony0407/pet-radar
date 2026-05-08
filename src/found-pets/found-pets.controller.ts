@@ -1,4 +1,4 @@
-import { Controller, Post, Body } from '@nestjs/common';
+import { Controller, Post, Body, Get } from '@nestjs/common';
 import { FoundPetsService } from './found-pets.service';
 
 @Controller('found-pets')
@@ -9,6 +9,11 @@ export class FoundPetsController {
   @Post()
   create(@Body() body: any) {
     return this.foundPetsService.create(body);
+  }
+
+  @Get()
+findAll() {
+  return this.foundPetsService.findAll();
   }
 
 }
