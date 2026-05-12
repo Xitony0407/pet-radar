@@ -23,7 +23,6 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build image
-        run: docker build -t ghcr.io/${{ github.repository }}/pet-radar:latest .
-
+        run: docker build -t ghcr.io/xitony0407/pet-radar:latest .
       - name: Push image
-        run: docker push ghcr.io/${{ github.repository }}/pet-radar:latest
+        run: docker push ghcr.io/xitony0407/pet-radar:latest
