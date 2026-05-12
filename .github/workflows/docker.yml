@@ -5,13 +5,15 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read
+  packages: write
+
 jobs:
   docker:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -24,5 +26,6 @@ jobs:
 
       - name: Build image
         run: docker build -t ghcr.io/xitony0407/pet-radar:latest .
+
       - name: Push image
         run: docker push ghcr.io/xitony0407/pet-radar:latest
