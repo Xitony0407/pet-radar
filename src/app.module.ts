@@ -12,7 +12,7 @@ import { FoundPetsModule } from './found-pets/found-pets.module';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'localhost',
+      host: 'host.docker.internal',
       port: 5432,
       username: 'postgres',
       password: 'Xitony0407',
@@ -23,7 +23,7 @@ import { FoundPetsModule } from './found-pets/found-pets.module';
 
     CacheModule.register({
   store: redisStore,
-  host: 'localhost',
+  host: 'host.docker.internal',
   port: 6379,
   ttl: 60,
   isGlobal: true,
