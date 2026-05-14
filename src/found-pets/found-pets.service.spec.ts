@@ -1,4 +1,3 @@
-import { MailerService } from '@nestjs-modules/mailer';
 import { Test, TestingModule } from '@nestjs/testing';
 import { FoundPetsService } from './found-pets.service';
 

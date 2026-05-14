@@ -100,4 +100,4 @@ Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 
 ## Demo final
 
-API REST PetRadar con NestJS, PostgreSQL, PostGIS, Redis, Docker, GitHub Actions y GHCR.
+API REST PetRadar con NestJS, PostgreSQL, PostGIS, Redis, Docker, GitHub Actions y GHCR. . .
